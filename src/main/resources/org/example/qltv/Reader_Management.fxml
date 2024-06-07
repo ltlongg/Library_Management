@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.qltv.Home.Reader_Management">
+   <top>
+      <AnchorPane prefHeight="250.0" prefWidth="1000.0" style="-fx-background-color: #968a8a;" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER_RIGHT" layoutX="16.0" layoutY="9.0" mnemonicParsing="false" onAction="#HomeBR" prefHeight="30.0" prefWidth="81.0" text="Home">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="16.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@left-arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="126.0" layoutX="387.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@open-book.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="480.0" layoutY="54.0" prefHeight="27.0" prefWidth="193.0" text="B/R Book Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label ellipsisString="" layoutX="348.0" layoutY="117.0" prefHeight="17.0" prefWidth="332.0" text="-------------------------------------------------------------------------------------------------------" />
+            <Label layoutX="145.0" layoutY="161.0" text="Book ID: ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="BookIDBR" layoutX="214.0" layoutY="157.0" promptText="Enter..." />
+            <TextField fx:id="ReaderIDBR" layoutX="710.0" layoutY="157.0" promptText="Enter..." />
+            <Label layoutX="629.0" layoutY="161.0" text="Reader ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="376.0" layoutY="199.0" mnemonicParsing="false" onAction="#SearchBR" prefHeight="25.0" prefWidth="92.0" text="Search" />
+            <Button layoutX="544.0" layoutY="201.0" mnemonicParsing="false" onAction="#TableDetailBR" prefHeight="25.0" prefWidth="92.0" text="Table" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="367.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="TableBR" layoutX="16.0" prefHeight="339.0" prefWidth="933.0">
+              <columns>
+                <TableColumn fx:id="BookIDTableBR" prefWidth="60.66668891906738" text="Book ID" />
+                <TableColumn fx:id="BookNameTableBR" prefWidth="169.99999237060547" text="Book Name" />
+                  <TableColumn fx:id="ReaderIDTableBR" prefWidth="63.99998474121094" text="Reader ID" />
+                  <TableColumn fx:id="ReaderNameTableBR" prefWidth="130.6666259765625" text="Reader Name" />
+                  <TableColumn fx:id="PhoneTableBR" prefWidth="117.33340454101562" text="Phone" />
+                  <TableColumn fx:id="GmailTableBR" prefWidth="154.66668701171875" text="Gmail" />
+                  <TableColumn fx:id="IssueDateTableBr" prefWidth="116.0" text="Issue Date" />
+                  <TableColumn fx:id="DueDateTableBR" prefWidth="122.66668701171875" text="Due Date" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

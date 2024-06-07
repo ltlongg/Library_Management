@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.qltv.SignIn">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="255.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@book.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="45.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Library Management">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="66.0" layoutY="325.0" mnemonicParsing="false" onAction="#OnClickSignIn" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #0598ff;" text="Sign In" textFill="WHITE" />
+            <Button layoutX="161.0" layoutY="325.0" mnemonicParsing="false" onAction="#OnClickSignUp" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #0598ff;" text="Sign Up" textFill="WHITE" />
+            <Text layoutX="149.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" wrappingWidth="102.78965759277344">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="UsernameText" alignment="CENTER" layoutX="132.0" layoutY="211.0" promptText="Username" style="-fx-border-color: #0598ff;" />
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="89.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="88.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@padlock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="169.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ancestors.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="PasswordText" alignment="CENTER" layoutX="130.0" layoutY="260.0" promptText="Password" style="-fx-border-color: #0598ff;" />
+            <Label fx:id="InvalidSignInMassege" alignment="CENTER" layoutX="51.0" layoutY="42.0" prefHeight="27.0" prefWidth="279.0" textAlignment="CENTER" textFill="#e90303">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Button fx:id="Cancel" layoutX="257.0" layoutY="325.0" mnemonicParsing="false" onAction="#OnClickCancel" prefHeight="35.0" prefWidth="60.0" style="-fx-background-color: #0598ff;" text="Cancel" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
